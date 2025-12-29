@@ -3,14 +3,13 @@
   "version": "1.0.0",
   "description": "MCP server for AnyList shopping lists and recipe collections",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "src/index.ts",
   "bin": {
-    "anylist-mcp": "dist/index.js"
+    "anylist-mcp": "src/index.ts"
   },
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
-    "start": "node dist/index.js"
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": ["mcp", "anylist", "shopping-list"],
   "author": "",
@@ -19,10 +18,13 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.25.1",
     "anylist": "^0.8.5",
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.2.3",
+    "zod": "^3.24.0"
   },
   "devDependencies": {
-    "@types/node": "^25.0.3",
-    "typescript": "^5.9.3"
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.10.2",
+    "tsx": "^4.0.0",
+    "typescript": "^5.7.2"
   }
 }
