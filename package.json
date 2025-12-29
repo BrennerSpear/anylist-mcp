@@ -1,0 +1,28 @@
+{
+  "name": "anylist-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for AnyList shopping lists and recipe collections",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "anylist-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js"
+  },
+  "keywords": ["mcp", "anylist", "shopping-list"],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.18.3",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.1",
+    "anylist": "^0.8.5",
+    "dotenv": "^17.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "typescript": "^5.9.3"
+  }
+}
