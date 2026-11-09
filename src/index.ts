@@ -2,24 +2,17 @@
 
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js"
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
-import { config as loadEnv } from "dotenv"
-import os from "node:os"
-import path from "node:path"
 import { z } from "zod"
 // @ts-expect-error - anylist has no type definitions
 import AnyList from "anylist"
-
-// Load credentials from ~/.claude/secrets/anylist/.env
-const envPath = path.join(os.homedir(), ".claude", "secrets", "anylist", ".env")
-loadEnv({ path: envPath })
 
 const email = process.env.ANYLIST_EMAIL
 const password = process.env.ANYLIST_PASSWORD
 
 if (!email || !password) {
-	console.error(`Missing credentials. Create ${envPath} with:`)
-	console.error("ANYLIST_EMAIL=your@email.com")
-	console.error("ANYLIST_PASSWORD=yourpassword")
+	console.error("Missing AnyList credentials. Set these environment variables:")
+	console.error("  ANYLIST_EMAIL")
+	console.error("  ANYLIST_PASSWORD")
 	process.exit(1)
 }
 

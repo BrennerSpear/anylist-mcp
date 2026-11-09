@@ -11,14 +11,17 @@
     "start": "tsx src/index.ts",
     "typecheck": "tsc --noEmit"
   },
-  "keywords": ["mcp", "anylist", "shopping-list"],
+  "keywords": [
+    "mcp",
+    "anylist",
+    "shopping-list"
+  ],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.18.3",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.25.1",
     "anylist": "^0.8.5",
-    "dotenv": "^17.2.3",
     "zod": "^3.24.0"
   },
   "devDependencies": {
